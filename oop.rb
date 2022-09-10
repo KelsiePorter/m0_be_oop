@@ -67,7 +67,7 @@ class Dragon
   #     @is_hungry = false
   #   end
   # end
-  
+
   def eat
     if @meals == 3
       @is_hungry = false
@@ -90,17 +90,23 @@ end
 # p dragon3
 
 dragon4 = Dragon.new("Tyler", "Kelsie", "Red")
+# p dragon4
+# dragon4.eat
+# p dragon4
+# dragon4.eat
+# p dragon4
+# dragon4.eat
+# p dragon4
+# dragon4.eat
+# p dragon4
+# dragon4.eat
+# p dragon4
 p dragon4
-dragon4.eat
+4.times do
+  dragon4.eat
+end
 p dragon4
-dragon4.eat
-p dragon4
-dragon4.eat
-p dragon4
-dragon4.eat
-p dragon4
-dragon4.eat
-p dragon4
+
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
