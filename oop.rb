@@ -26,24 +26,24 @@
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
-class Vampire
-  def initialize(name, pet = "bat")
-    @name = name
-    @pet = pet
-    @thirsty = true
-  end
-
-  def drink
-    @thirsty = false
-  end
-end
-
-vamp1 = Vampire.new("River")
-vamp1.drink
-p vamp1
-
-vamp2 = Vampire.new("Wicklow", "cat")
-p vamp2
+# class Vampire
+#   def initialize(name, pet = "bat")
+#     @name = name
+#     @pet = pet
+#     @thirsty = true
+#   end
+#
+#   def drink
+#     @thirsty = false
+#   end
+# end
+#
+# vamp1 = Vampire.new("River")
+# vamp1.drink
+# p vamp1
+#
+# vamp2 = Vampire.new("Wicklow", "cat")
+# p vamp2
 
 
 #  Write a Dragon class
@@ -53,6 +53,54 @@ p vamp2
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
+class Dragon
+  def initialize(name, rider, color, is_hungry = true)
+    @name = name
+    @rider = rider
+    @color = color
+    @is_hungry = is_hungry
+    @meals = 0
+  end
+
+  # def eat(meals)
+  #   if meals >= 4
+  #     @is_hungry = false
+  #   end
+  # end
+  
+  def eat
+    if @meals == 3
+      @is_hungry = false
+      @meals += 1
+    else
+      @meals += 1
+    end
+  end
+end
+
+# dragon1 = Dragon.new("Bodi", "Dean", "Black")
+# dragon1.eat(5)
+# p dragon1
+#
+# dragon2 = Dragon.new("Florence", "Benji", "Silver")
+# dragon2.eat(3)
+# p dragon2
+#
+# dragon3 = Dragon.new("Kelly", "Brock", "Purple")
+# p dragon3
+
+dragon4 = Dragon.new("Tyler", "Kelsie", "Red")
+p dragon4
+dragon4.eat
+p dragon4
+dragon4.eat
+p dragon4
+dragon4.eat
+p dragon4
+dragon4.eat
+p dragon4
+dragon4.eat
+p dragon4
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
