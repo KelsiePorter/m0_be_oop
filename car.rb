@@ -25,7 +25,7 @@ class Car
   # end
 end
 
-car1 = Car.new("Ford", "F150", "hot ass pink")
+car1 = Car.new("Ford", "F150", "pink")
 
 p car1.make
 p car1.model
